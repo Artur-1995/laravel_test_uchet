@@ -41,7 +41,7 @@
                             @foreach ($contacts as $contact)
                                 <option {{ old('contact_id[]') == $contact->id ? 'selected' : '' }}
                                     value="{{ $contact->id }}">
-                                    {{ $contact->name }}</option>
+                                    {{ "$contact->name $contact->last_name" }}</option>
                             @endforeach
                         </select>
                         @error('contact_id')
